@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AADFFD25275A7E9E0049766A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADFFD24275A7E9E0049766A /* Colors.xcassets */; };
+		AADFFD27275A81940049766A /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFFD26275A81940049766A /* Calendar.swift */; };
+		AADFFD29275E62BF0049766A /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFFD28275E62BF0049766A /* Menu.swift */; };
+		AADFFD2E275E68F50049766A /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFFD2D275E68F50049766A /* CustomColors.swift */; };
+		AADFFD30275E69160049766A /* CustomSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFFD2F275E69160049766A /* CustomSizes.swift */; };
+		AADFFD33275E77C00049766A /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFFD32275E77C00049766A /* MenuItem.swift */; };
 		AAFA5E642755518900C19D92 /* managerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA5E632755518900C19D92 /* managerApp.swift */; };
 		AAFA5E662755518900C19D92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFA5E652755518900C19D92 /* ContentView.swift */; };
 		AAFA5E682755518B00C19D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAFA5E672755518B00C19D92 /* Assets.xcassets */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AADFFD24275A7E9E0049766A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		AADFFD26275A81940049766A /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		AADFFD28275E62BF0049766A /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		AADFFD2D275E68F50049766A /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
+		AADFFD2F275E69160049766A /* CustomSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSizes.swift; sourceTree = "<group>"; };
+		AADFFD32275E77C00049766A /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		AAFA5E602755518900C19D92 /* manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAFA5E632755518900C19D92 /* managerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = managerApp.swift; sourceTree = "<group>"; };
 		AAFA5E652755518900C19D92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +87,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AADFFD22275A7D160049766A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AADFFD31275E77A10049766A /* Menu */,
+				AADFFD26275A81940049766A /* Calendar.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AADFFD23275A7D360049766A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AADFFD2A275E68A90049766A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AADFFD2D275E68F50049766A /* CustomColors.swift */,
+				AADFFD2F275E69160049766A /* CustomSizes.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AADFFD31275E77A10049766A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AADFFD28275E62BF0049766A /* Menu.swift */,
+				AADFFD32275E77C00049766A /* MenuItem.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		AAFA5E572755518900C19D92 = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +144,16 @@
 		AAFA5E622755518900C19D92 /* manager */ = {
 			isa = PBXGroup;
 			children = (
+				AADFFD2A275E68A90049766A /* Util */,
+				AADFFD23275A7D360049766A /* Models */,
+				AADFFD22275A7D160049766A /* Views */,
 				AAFA5E632755518900C19D92 /* managerApp.swift */,
 				AAFA5E652755518900C19D92 /* ContentView.swift */,
 				AAFA5E672755518B00C19D92 /* Assets.xcassets */,
 				AAFA5E6C2755518B00C19D92 /* Persistence.swift */,
 				AAFA5E6E2755518C00C19D92 /* manager.xcdatamodeld */,
 				AAFA5E692755518B00C19D92 /* Preview Content */,
+				AADFFD24275A7E9E0049766A /* Colors.xcassets */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -237,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADFFD25275A7E9E0049766A /* Colors.xcassets in Resources */,
 				AAFA5E6B2755518B00C19D92 /* Preview Assets.xcassets in Resources */,
 				AAFA5E682755518B00C19D92 /* Assets.xcassets in Resources */,
 			);
@@ -263,10 +314,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADFFD29275E62BF0049766A /* Menu.swift in Sources */,
 				AAFA5E6D2755518B00C19D92 /* Persistence.swift in Sources */,
+				AADFFD2E275E68F50049766A /* CustomColors.swift in Sources */,
 				AAFA5E662755518900C19D92 /* ContentView.swift in Sources */,
 				AAFA5E642755518900C19D92 /* managerApp.swift in Sources */,
+				AADFFD30275E69160049766A /* CustomSizes.swift in Sources */,
+				AADFFD33275E77C00049766A /* MenuItem.swift in Sources */,
 				AAFA5E702755518C00C19D92 /* manager.xcdatamodeld in Sources */,
+				AADFFD27275A81940049766A /* Calendar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -409,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -427,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"manager/Preview Content\"";
+				DEVELOPMENT_TEAM = 7LHUB7G93D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -439,7 +496,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.manager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mani.manager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -455,6 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"manager/Preview Content\"";
+				DEVELOPMENT_TEAM = 7LHUB7G93D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -467,7 +525,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.manager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mani.manager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
