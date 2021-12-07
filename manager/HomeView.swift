@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+    @StateObject var viewModel = HomeViewModel()
     var body: some View {
         GeometryReader {geo in
             VStack {
                 viewModel.getPageContent()
                 Spacer()
-                MenuView(viewModel: viewModel)
+                MenuView(currentHomePage: $viewModel.currentHomePage)
             }
             .frame(width: geo.size.width, height: geo.size.height)
             .edgesIgnoringSafeArea(.bottom)

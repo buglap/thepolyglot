@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct MenuView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+    @Binding var currentHomePage: MenuOptions
     var body: some View {
         HStack(alignment: .center){
             Button(action: {
-                viewModel.currentHomePage = .news
+                currentHomePage = .news
             }) {
-                MenuItemView(title: "News", icon: "newspaper", isSelected: (viewModel.currentHomePage == .news))
+                MenuItemView(title: "News", icon: "newspaper", isSelected: (currentHomePage == .news))
             }
             Button(action: {
-                viewModel.currentHomePage = .vocaburary
+                currentHomePage = .vocaburary
             }) {
-                MenuItemView(title: "Vocabulary", icon: "brain", isSelected: (viewModel.currentHomePage == .vocaburary))
+                MenuItemView(title: "Vocabulary", icon: "brain", isSelected: (currentHomePage == .vocaburary))
             }
             Button(action: {
-                viewModel.currentHomePage = .notes
+                currentHomePage = .notes
             }) {
-                MenuItemView(title: "Notes", icon: "note", isSelected: (viewModel.currentHomePage == .notes))
+                MenuItemView(title: "Notes", icon: "note", isSelected: (currentHomePage == .notes))
             }
             Button(action: {
-                viewModel.currentHomePage = .account
+                currentHomePage = .account
             }) {
-                MenuItemView(title: "Profile", icon: "person", isSelected: (viewModel.currentHomePage == .account))
+                MenuItemView(title: "Profile", icon: "person", isSelected: (currentHomePage == .account))
             }
         }.padding(.horizontal)
             .font(.footnote)
@@ -42,7 +42,7 @@ struct MenuView: View {
 
 struct Menu_Previews: PreviewProvider {
     static var previews: some View {
-        MenuView()
+        MenuView(currentHomePage: .constant(.news))
     }
 }
 
