@@ -1,5 +1,5 @@
 //
-//  MenuItem.swift
+//  MenuItemView.swift
 //  manager
 //
 //  Created by Jenny escobar on 6/12/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuItem: View {
+struct MenuItemView: View {
     let title: String
     let icon: String
     let isSelected: Bool
@@ -23,6 +23,6 @@ struct MenuItem: View {
 
 struct MenuItem_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItem(title: "profile", icon: "person", isSelected: true)
+        MenuItemView(title: "profile", icon: "person", isSelected: true)
     }
 }
