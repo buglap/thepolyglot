@@ -8,8 +8,36 @@
 import SwiftUI
 
 struct NotesView: View {
+    @ObservedObject var searchNewsViewModel: SearchNewsViewModel = SearchNewsViewModel.shared
+    @ObservedObject var noteListViewModel = NoteListViewModel()
+    @State var showForm = false
     var body: some View {
-        Text("Hello, Notes!")
+        VStack {
+            HStack {
+                PickerView(mapChoioceString: $searchNewsViewModel.currentSelectedLanguage, settings: searchNewsViewModel.availableLanguages)
+                Spacer()
+                Button(action: {
+                    showForm.toggle()
+                }, label: {
+                    Image(systemName: "plus.circle.fill").foregroundColor(Color(.systemIndigo))
+                })
+            }.padding()
+            VStack {
+                Text("Add something you wanna review later.")
+            }
+            VStack(alignment: .leading) {
+                ScrollView(.vertical) {
+                    VStack(spacing: 4) {
+                        ForEach(noteListViewModel.noteViewModels) { noteViewModel in
+                            NoteView(noteViewModel: noteViewModel)
+                        }
+                    }
+                }
+            }.popup(isPresented: $showForm) {
+                NewNoteForm(noteListViewModel: NoteListViewModel(), isPresented: $showForm, language: $searchNewsViewModel.currentSelectedLanguage)
+            }
+            Spacer()
+        }.padding(.bottom, 40)
     }
 }
 

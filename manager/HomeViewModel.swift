@@ -10,7 +10,6 @@ import SwiftUI
 
 class HomeViewModel: ObservableObject {
     @Published var currentHomePage: MenuOptions
-    static let shared = HomeViewModel()
     
     init(){
         self.currentHomePage = .news
@@ -22,8 +21,6 @@ class HomeViewModel: ObservableObject {
             return AnyView(ProfileView())
         case .news:
             return AnyView(NewsColletion())
-        case .vocaburary:
-            return AnyView(VocabularyView())
         case .notes:
             return AnyView(NotesView())
         }
@@ -32,5 +29,5 @@ class HomeViewModel: ObservableObject {
 
 
 enum MenuOptions {
-    case account, news, vocaburary, notes
+    case account, news, notes
 }

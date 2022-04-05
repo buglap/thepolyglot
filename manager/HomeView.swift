@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = HomeViewModel()
+    @EnvironmentObject var viewModel: HomeViewModel
     var body: some View {
         GeometryReader {geo in
-            VStack {
-                viewModel.getPageContent()
-                Spacer()
-                MenuView(currentHomePage: $viewModel.currentHomePage)
+            ZStack {
+                VStack(alignment: .leading) {
+                    viewModel.getPageContent()
+                    Spacer()
+                }
+                VStack(alignment: .trailing) {
+                    Spacer()
+                    MenuView(currentHomePage: $viewModel.currentHomePage)
+                }
             }
             .frame(width: geo.size.width, height: geo.size.height)
             .edgesIgnoringSafeArea(.bottom)
-       
+
         }
     }
 }

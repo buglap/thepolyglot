@@ -16,16 +16,13 @@ struct MenuView: View {
             }) {
                 MenuItemView(title: "News", icon: "newspaper", isSelected: (currentHomePage == .news))
             }
-            Button(action: {
-                currentHomePage = .vocaburary
-            }) {
-                MenuItemView(title: "Vocabulary", icon: "brain", isSelected: (currentHomePage == .vocaburary))
-            }
+            Spacer()
             Button(action: {
                 currentHomePage = .notes
             }) {
                 MenuItemView(title: "Notes", icon: "note", isSelected: (currentHomePage == .notes))
             }
+            Spacer()
             Button(action: {
                 currentHomePage = .account
             }) {
